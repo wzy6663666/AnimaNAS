@@ -1,0 +1,17 @@
+# WorkBuddy 项目记忆/缓存（不要上传到 GitHub）
+.workbuddy/
+
+# 日志文件
+*.log
+debug.log
+
+# 系统与临时文件
+.DS_Store
+Thumbs.db
+*.tmp
+
+# 依赖目录（如有）
+node_modules/
+__pycache__/
+.venv/
+env/

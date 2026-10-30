@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ANIME VAULT · 番剧硬盘档案馆</title>
+<link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.7">
+          <path d="M4 7.5 12 3l8 4.5v9L12 21l-8-4.5z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/>
+        </svg>
+      </div>
+      <div class="brand-txt">
+        <b>ANIME VAULT</b>
+        <span>番剧硬盘档案馆</span>
+      </div>
+    </div>
+
+    <button class="drive-all" id="btnAll">
+      <span class="da-ico">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/>
+          <circle cx="7" cy="7.5" r="1" fill="currentColor" stroke="none"/><circle cx="7" cy="16.5" r="1" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span class="da-main"><b>全部硬盘</b><span id="allMeta">—</span></span>
+    </button>
+
+    <div class="side-head">
+      <span>单块硬盘</span>
+      <span class="count" id="driveCount">0</span>
+    </div>
+    <div class="drive-list" id="driveList"></div>
+
+    <button class="add-drive" id="btnAdd">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      记录新硬盘
+    </button>
+
+    <div class="side-tip">
+      <b>提示</b>换盘后点「记录新硬盘」重新扫描，旧快照会保留，可随时查看已拔下硬盘的内容清单。
+    </div>
+    <div class="side-foot">
+      <span class="dot" id="srvDot"></span>
+      <span id="srvTxt">本地服务运行中</span>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="tabbar" id="tabbar">
+        <button class="tab active" data-view="overview">概览</button>
+        <button class="tab" data-view="library">番剧墙</button>
+        <button class="tab" data-view="browse">目录</button>
+      </div>
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+        <input id="search" placeholder="搜索番剧、文件夹、文件名…" autocomplete="off">
+        <kbd>/</kbd>
+      </div>
+    </header>
+
+    <div class="view" id="view"></div>
+  </main>
+</div>
+
+<div class="drawer-mask" id="drawerMask"></div>
+<aside class="drawer" id="drawer"></aside>
+<div class="modal-mask" id="modalMask"></div>
+<div class="modal" id="modal"></div>
+<div class="toasts" id="toasts"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
